@@ -21,7 +21,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to groups_path
     else
-      render :edit
+      render :new
     end
   end
 
@@ -46,5 +46,5 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:title, :description)
   end
-  
+
 end
